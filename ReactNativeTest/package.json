@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@asmadsen/react-native-unity-view": "^0.0.6",
+    "jetifier": "^1.6.5",
     "react": "16.11.0",
     "react-native": "0.62.2"
   },
