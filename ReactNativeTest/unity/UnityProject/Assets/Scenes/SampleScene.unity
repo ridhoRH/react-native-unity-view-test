@@ -264,7 +264,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.2241548e+32, y: 7.9316175e+34, z: 1.8007913e+25,
+    w: 4.1292614e+30}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -376,7 +377,7 @@ Animation:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: e14237ffaab040b49973b1c7dfd289bf, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: e14237ffaab040b49973b1c7dfd289bf, type: 2}
   m_WrapMode: 0
