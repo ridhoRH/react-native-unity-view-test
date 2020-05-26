@@ -3,3 +3,7 @@ ReactNativeTestApp/unity/UnityProject/Logs/
 ReactNativeTestApp/unity/UnityProject/Temp/
 ReactNativeTest/unity/UnityProject/Temp/
 ReactNativeTest/unity/UnityProject/Library/
+ReactNativeTest/unity/UnityProject/obj/
+ReactNativeTest/unity/UnityProject/Assembly-CSharp.csproj
+ReactNativeTest/unity/UnityProject/Assembly-CSharp-Editor.csproj
+ReactNativeTest/unity/UnityProject/UnityProject.sln

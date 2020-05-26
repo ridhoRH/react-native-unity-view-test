@@ -4,20 +4,27 @@ import {
   StyleSheet,
   View,
   Text,
+  Button,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {UnityView} from '@asmadsen/react-native-unity-view';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { UnityView } from '@asmadsen/react-native-unity-view';
+import { UnityModule } from '@asmadsen/react-native-unity-view';
 
 
 export default class App extends React.Component<Props, State>{
+  onToggleRotate() {
+    UnityModule.postMessageToUnityManager('message');
+  }
+
   render() {
     return (
-      <View>      
-        <Text style={styles.sectionTitle}>
-          Welcome to React Native!
-        </Text>
-        <UnityView style={styles.container}/>
+      <View>
+        <Button
+          label="ARButton"
+          onPress={this.onToggleRotate.bind(this)}
+          title="Toggle EasyAR Camera" />
+        <UnityView style={styles.container} />
       </View>
     );
   }
