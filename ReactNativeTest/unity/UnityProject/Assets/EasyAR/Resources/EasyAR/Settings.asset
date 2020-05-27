@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963aaa1ae868b0140b6456db09120440, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  LicenseKey: SHvKIExo0jxUCV13IDV9TkV6Io4CqZC6/yTiW3hJ/AtMWfoWeFTtWzcY6xBpUvY5f1/3HWhI8RxsXupXblX0WyEY9Bh+TvwLRl/gMGkYo0ghGPUQbl/3CmhJu0NWQbsbeFT9FWhz/QovAMJbblX0V39f+Bp5VPgNZEz8DWhJ7VshGPoWYBTrHGxZ7RdsTvAPaE78CnkYxFUvTPgLZFv3DX4YoyIvWPgKZFm7JCEY6RVsTv8Wf1fqWzdhuw5kVP0Wekm7VS9X+BovZ7VbaELpEH9fzRBgX8oNbFfpWzdU7BVhFrsQfnb2GmxWu0NrW/UKaEe1Ai9Y7BdpVvwwaUm7Q1YY+hZgFOscbFntF2xO8A9oTvwKeRjEVS9M+AtkW/cNfhijIi9Y+ApkWbskIRjpFWxO/xZ/V+pbN2G7GGNe6xZkXrskIRj8AX1T6xxZU/QcXk74FH0Yoxd4VvVVL1PqNWJZ+BUvAP8YYUn8BCFBuxt4VP0VaHP9Ci8AwltuVfRXf1/4GnlU+A1kTPwNaEntW1AWuw9sSPAYY07qWzdhuxtsSfAaL2e1W31W+A1rVesUfhijIi9T9govZ7VbaELpEH9fzRBgX8oNbFfpWzdU7BVhFrsQfnb2GmxWu0NrW/UKaEfEBBaNCP0NVqDgY2fMl/1GM4UYoWkJuXDae6Oc51XYzHPxlg1oCGl89qLCWhNMLQS3/HKEpNQvBB9D9M6vbpmdnM/mw5Jc4FiZAoUXnR3g1bEpMzCZha4LbZnxb4fElui8tiG97XwIvHApTWGX67TG2YwcnKgtmggk8YUwRulDU0zKSfgLg6BqiLtZLawVOp475s4sosxcYb+Y0pCaK3Ae2wvncsDD+aDjsZgT7C941ZnHBWTFjTWd33BlTcwAU6ZyPC6xC4xMYUazDoJPyMi4aEX/DipIn3EZXmDQt48xuahEa0Gc6Yz/elVjd1bDWCtI4OrcoDieIR13xzF1DQ06mXk=
+  GizmoConfig:
+    ImageTarget:
+      EnableImageFile: 1
+      EnableTargetDataFile: 1
+      EnableTarget: 1
+    ObjectTarget:
+      Enable: 1
+  GlobalCloudRecognizerServiceConfig:
+    ServerAddress: 
+    APIKey: 
+    APISecret: 
+    CloudRecognizerAppID: 
