@@ -10,11 +10,16 @@ import {
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { UnityView } from '@asmadsen/react-native-unity-view';
 import { UnityModule } from '@asmadsen/react-native-unity-view';
+import LottieView from 'lottie-react-native';
+
 
 
 export default class App extends React.Component<Props, State>{
-  onToggleRotate() {
-    UnityModule.postMessageToUnityManager('message');
+  onToggleUnity() {
+    UnityModule.postMessageToUnityManager('React Button Pressed');
+  }
+
+  componentDidMount() {
   }
 
   render() {
@@ -22,9 +27,14 @@ export default class App extends React.Component<Props, State>{
       <View>
         <Button
           label="ARButton"
-          onPress={this.onToggleRotate.bind(this)}
-          title="Toggle EasyAR Camera" />
+          onPress={this.onToggleUnity.bind(this)}
+          title="Toggle Unity Colours" />
         <UnityView style={styles.container} />
+        <LottieView style={{width: 200, height: 200, position: "absolute", bottom: 0, right: 0}}
+        ref={animation => {
+          this.animation = animation;
+        }}
+        source={require('./connected.json')}/>
       </View>
     );
   }
@@ -33,6 +43,9 @@ export default class App extends React.Component<Props, State>{
 const styles = StyleSheet.create({
   container: {
     height: '100%',
+  },
+  cbottom:{
+    height: '50%',
   },
   sectionTitle: {
     fontSize: 24,

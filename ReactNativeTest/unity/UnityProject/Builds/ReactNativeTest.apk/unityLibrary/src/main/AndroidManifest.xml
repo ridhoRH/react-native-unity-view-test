@@ -10,7 +10,7 @@
     </activity>
     <meta-data android:name="unity.splash-mode" android:value="0" />
     <meta-data android:name="unity.splash-enable" android:value="True" />
-    <meta-data android:name="unity.build-id" android:value="34cf1caf-6499-4fb0-a365-30ef3e055664" />
+    <meta-data android:name="unity.build-id" android:value="713f2368-f838-4eff-8e44-d411722ca28f" />
   </application>
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

@@ -1,31 +1,60 @@
-﻿using System.Collections;
+﻿using easyar;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SMS : MonoBehaviour
 {
-    public GameObject model;
-    public Text bundleId;
+	public Animation animation;
+	public GameObject easyARCamera;
+	public Text messageText;
+	private int _count;
+	public ImageTargetController easyARTarget;
 
-    void Awake()
-    {
-        UnityMessageManager.Instance.OnMessage += toggleRotate;
-    }
+	void Awake()
+	{
+		UnityMessageManager.Instance.OnMessage += toggleEasyAR;
+		_count = 0;
 
-    void onDestroy()
-    {
-        UnityMessageManager.Instance.OnMessage -= toggleRotate;
-    }
+		easyARTarget.TargetFound += SendOnToReact;
+		easyARTarget.TargetLost += SendOffToReact;
+	}
 
-    private void Update()
-    {
-        //bundleId.text = Application.identifier;
-    }
+	void onDestroy()
+	{
+		UnityMessageManager.Instance.OnMessage -= toggleEasyAR;
+	}
 
-    void toggleRotate(string message)
-    {
-        Debug.Log("onMessage:" + message);
-        model.SetActive(!model.activeSelf);
-    }
+	private void Update()
+	{
+	}
+
+	public void SendOnToReact()
+	{
+		Debug.Log("ON");
+		UnityMessageManager.Instance.SendMessageToRN("on");
+	}
+	public void SendOffToReact()
+	{
+		Debug.Log("OFF");
+		UnityMessageManager.Instance.SendMessageToRN("off");
+	}
+
+	void toggleEasyAR(string message)
+	{
+		messageText.text = _count + " " + message;
+		_count++;
+
+		if (animation.isPlaying)
+		{
+			animation.Stop();
+			easyARCamera.SetActive(true);
+		}
+		else
+		{
+			animation.Play();
+			easyARCamera.SetActive(false);
+		}
+	}
 }
