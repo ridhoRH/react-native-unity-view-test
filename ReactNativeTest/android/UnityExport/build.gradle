@@ -7,7 +7,7 @@ dependencies {
     implementation ':unity-classes'
     implementation(name: 'UnityAds', ext:'aar')
     implementation(name: 'UnityAdsAndroidPlugin', ext:'aar')
-    api fileTree(include: ['.jar','.aar'], dir: 'libs')
+    implementation ':EasyAR'
 }
 
 android {
