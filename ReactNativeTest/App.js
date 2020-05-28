@@ -20,10 +20,14 @@ export default class App extends React.Component<Props, State>{
   }
 
   onMessage(event) {
-    if (event.nativeEvent.message === 'on') {
+    console.log('OnUnityMessage: ' + event); 
+
+    if (''+event === 'on') {
+      console.log ("ON");
       this.animation.play();
     }
     else {
+      console.log ("OFF");
       this.animation.pause();
       this.animation.reset();
     }
@@ -37,7 +41,8 @@ export default class App extends React.Component<Props, State>{
           label="ARButton"
           onPress={this.onToggleUnity.bind(this)}
           title="Toggle Unity Colours" />
-        <UnityView style={styles.container} />
+        <UnityView style={styles.container} 
+         onMessage={this.onMessage.bind(this)}/>
         <LottieView style={{ width: 200, height: 200, position: "absolute", bottom: 0, right: 0 }}
           ref={animation => {
             this.animation = animation;
