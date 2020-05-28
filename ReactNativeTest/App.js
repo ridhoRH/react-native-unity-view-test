@@ -19,8 +19,16 @@ export default class App extends React.Component<Props, State>{
     UnityModule.postMessageToUnityManager('React Button Pressed');
   }
 
-  componentDidMount() {
+  onMessage(event) {
+    if (event.nativeEvent.message === 'on') {
+      this.animation.play();
+    }
+    else {
+      this.animation.pause();
+      this.animation.reset();
+    }
   }
+
 
   render() {
     return (
@@ -30,11 +38,11 @@ export default class App extends React.Component<Props, State>{
           onPress={this.onToggleUnity.bind(this)}
           title="Toggle Unity Colours" />
         <UnityView style={styles.container} />
-        <LottieView style={{width: 200, height: 200, position: "absolute", bottom: 0, right: 0}}
-        ref={animation => {
-          this.animation = animation;
-        }}
-        source={require('./connected.json')}/>
+        <LottieView style={{ width: 200, height: 200, position: "absolute", bottom: 0, right: 0 }}
+          ref={animation => {
+            this.animation = animation;
+          }}
+          source={require('./connected.json')} />
       </View>
     );
   }
@@ -44,7 +52,7 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
   },
-  cbottom:{
+  cbottom: {
     height: '50%',
   },
   sectionTitle: {
