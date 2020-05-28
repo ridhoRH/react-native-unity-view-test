@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SMS : MonoBehaviour
 {
     public GameObject model;
+    public Text bundleId;
 
     void Awake()
     {
@@ -14,6 +16,11 @@ public class SMS : MonoBehaviour
     void onDestroy()
     {
         UnityMessageManager.Instance.OnMessage -= toggleRotate;
+    }
+
+    private void Update()
+    {
+        //bundleId.text = Application.identifier;
     }
 
     void toggleRotate(string message)
